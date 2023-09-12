@@ -24,8 +24,10 @@ export default function Login({ data }) {
     })
       .then((res) => res.json())
       .then((data) => {
-        setToken(data);
-        localStorage.setItem("token", JSON.stringify(data));
+        if (data.token) {
+          setToken(data);
+          localStorage.setItem("token", JSON.stringify(data));
+        }
       });
   }
 
