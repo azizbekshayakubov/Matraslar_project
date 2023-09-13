@@ -1,10 +1,4 @@
-import {
-  // createBrowserRouter,
-  // createRoutesFromElements,
-  Route,
-  Routes,
-  // RouterProvider,
-} from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Admin from "./pages/admin/Admin";
 import Login from "./pages/login/Login";
 import Home from "./pages/home/Home";
@@ -28,8 +22,6 @@ import { useState } from "react";
 
 import { useFetch } from "./hook/useFetch";
 
-// import { Route, Routes } from "react-router-dom";
-
 // import Home from "./pages/home/Home";
 // import Admin from "./pages/admin/Admin";
 // import Login from "./pages/login/Login";
@@ -48,10 +40,6 @@ function App() {
   const url = "http://localhost:1212/api/products";
   const { data } = useFetch(url);
   const category = data && data.categories;
-  console.log(category && category[0].join(" "));
-
-  // const routes = createBrowserRouter(
-  //   createRoutesFromElements(
 
   return (
     <>

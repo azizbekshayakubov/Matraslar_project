@@ -1,11 +1,10 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react'
-import ProductAdd from '../modals/products/ProductAdd';
+import React, { useEffect, useState } from "react";
+import ProductAdd from "../modals/products/ProductAdd";
 
 function Buyurtmalar() {
   const [order, setOrder] = useState(null);
-  
 
   useEffect(() => {
     fetch("http://localhost:1212/admin/orders/1", {
@@ -13,7 +12,7 @@ function Buyurtmalar() {
 
       headers: {
         "Content-Type": "application/json",
-        "Authorization":
+        Authorization:
           "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjkzNzQzNDU0fQ.sFu4MYKeNEy2Q7SufqeoX4yqN4G-G8GfWVEwUGwDOGo",
       },
     })

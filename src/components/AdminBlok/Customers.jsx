@@ -3,37 +3,6 @@ import React, { useEffect, useState } from "react";
 import { IconDelete } from "../../assets/style/adminimage/IconAdmin";
 
 function Customers() {
-  // const [contact, setContact] = useState([])
-  // useEffect(() => {
-  //   fetch("http://localhost:1212/admin/contact/1", {
-  //     method: "GET",
-  //     headers: {
-  //       Authorization:
-  //         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjkzNzQ3NzUwfQ.5UFeIeZhgdcOxLi-GZtJm_MIqdjcLgY7ixE6tN9h4E8",
-  //     },
-  //   })
-  //     .then((res) => res.json())
-  //     .then((data) => setContact(data));
-  // }, []);
-  // console.log(contact);
-
-  // var myHeaders = new Headers();
-  // myHeaders.append(
-  //   "Authorization",
-  //   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjc1MzU2MTUwfQ.TSJs3Yomp3woiYfoUUwK2azBR0tBBE-Rwtaco33pfP0",
-  // );
-
-  // var requestOptions = {
-  //   method: "GET",
-  //   headers: myHeaders,
-  //   redirect: "follow",
-  // };
-
-  // fetch("http://localhost:1212/admin/contact/2", requestOptions)
-  //   .then((response) => response.json())
-  //   .then((result) => console.log(result))
-  //   .catch((error) => console.log("error", error));
-
   return (
     <div className="m-auto mt-10 w-[1086px]">
       <table className="w-[1086px]  border ">
@@ -50,8 +19,8 @@ function Customers() {
         <tbody className="h-[59px] border text-center">
           <tr>
             <td className="pl-10">6</td>
-            <td>12:13-12.05.2021</td>
-            <td>+998 90 123 45 67</td>
+            <td>12:12-12.12.2022</td>
+            <td>+998 99 999 99 99</td>
             <td>
               <div className="mx-auto flex h-[15px] w-[32px] items-center rounded-[50px] bg-green-200 p-[1px]">
                 <span className="h-[13px]  w-[13px] rounded-[50px] bg-green-700"></span>
@@ -68,8 +37,8 @@ function Customers() {
         <tbody className="h-[59px] border text-center">
           <tr>
             <td className="pl-10">6</td>
-            <td>12:13-12.05.2021</td>
-            <td>+998 90 123 45 67</td>
+            <td>12:12-12.12.2022</td>
+            <td>+998 99 999 99 99</td>
             <td>
               <div className="mx-auto flex h-[15px] w-[32px] items-center rounded-[50px] bg-green-200 p-[1px]">
                 <span className="h-[13px]  w-[13px] rounded-[50px] bg-green-700"></span>
@@ -86,8 +55,8 @@ function Customers() {
         <tbody className="h-[59px] border text-center">
           <tr>
             <td className="pl-10">6</td>
-            <td>12:13-12.05.2021</td>
-            <td>+998 90 123 45 67</td>
+            <td>12:12-12.12.2022</td>
+            <td>+998 99 999 99 99</td>
             <td>
               <div className="mx-auto flex h-[15px] w-[32px] items-center rounded-[50px] bg-green-200 p-[1px]">
                 <span className="h-[13px]  w-[13px] rounded-[50px] bg-green-700"></span>
@@ -104,8 +73,8 @@ function Customers() {
         <tbody className="h-[59px] border text-center">
           <tr>
             <td className="pl-10">6</td>
-            <td>12:13-12.05.2021</td>
-            <td>+998 90 123 45 67</td>
+            <td>12:12-12.12.2022</td>
+            <td>+998 99 999 99 99</td>
             <td>
               <div className="mx-auto flex h-[15px] w-[32px] items-center rounded-[50px] bg-green-200 p-[1px]">
                 <span className="h-[13px]  w-[13px] rounded-[50px] bg-green-700"></span>
@@ -122,8 +91,8 @@ function Customers() {
         <tbody className="h-[59px] border text-center">
           <tr>
             <td className="pl-10">6</td>
-            <td>12:13-12.05.2021</td>
-            <td>+998 90 123 45 67</td>
+            <td>12:12-12.12.2022</td>
+            <td>+998 99 999 99 99</td>
             <td>
               <div className="mx-auto flex h-[15px] w-[32px] items-center rounded-[50px] bg-green-200 p-[1px]">
                 <span className="h-[13px]  w-[13px] rounded-[50px] bg-green-700"></span>
@@ -140,8 +109,8 @@ function Customers() {
         <tbody className="h-[59px] border text-center">
           <tr>
             <td className="pl-10">6</td>
-            <td>12:13-12.05.2021</td>
-            <td>+998 90 123 45 67</td>
+            <td>12:12-12.12.2022</td>
+            <td>+998 99 999 99 99</td>
             <td>
               <div className="mx-auto flex h-[15px] w-[32px] items-center rounded-[50px] bg-green-200 p-[1px]">
                 <span className="h-[13px]  w-[13px] rounded-[50px] bg-green-700"></span>
