@@ -54,7 +54,7 @@ function Header({ setOpenZakaz }) {
                     <a href="#aloqa">Aloqa</a>
                   </li>
                   <li>
-                    <NavLink to="/login">Admin</NavLink>
+                    <NavLink to="/admin">Admin</NavLink>
                   </li>
                 </ul>
                 <div className="tel__number mt-4 flex items-center">
@@ -88,7 +88,7 @@ function Header({ setOpenZakaz }) {
                       <a href="#aloqa">Aloqa</a>
                     </li>
                     <li>
-                      <NavLink to="/login">Admin</NavLink>
+                      <NavLink to="/admin">Admin</NavLink>
                     </li>
                   </ul>
                   <div className="flex items-center">
