@@ -1,16 +1,7 @@
 import { ArrowRight } from "../assets/style/imgs/icons/icons";
 import bed from "../assets/style/imgs/bed.png";
-// import 'bootstrap/dist/css/bootstrap.css';
-// import AwesomeSlider from "react-awesome-slider";
-// import AwsSliderStyles from "react-awesome-slider/src/styles.scss";
+
 import "./_Response.scss";
-
-// carousel
-
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-// import './Carousel.css'; // Create this CSS file for styling
-// import "bootstrap/dist/css/bootstrap. css";
 
 function Hero() {
   var myHeaders = new Headers();
@@ -19,13 +10,6 @@ function Hero() {
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjc1MzU2MTUwfQ.TSJs3Yomp3woiYfoUUwK2azBR0tBBE-Rwtaco33pfP0",
   );
 
-  // useEffect(()=>{
-  //   fetch("http://localhost:1212/admin/carousel", requestOptions)
-  //     .then((response) => response.json())
-  //     .then((result) => setData(result))
-  //     .catch((error) => console.log("error", error));
-  //   },[])
-  //   console.log(data);
   return (
     <div className="w-full overflow-auto">
       <div className="flex">
@@ -46,7 +30,7 @@ function Hero() {
               </div>
             </a>
             <div className=" flex-line ">
-              <div className="line ">{/* <div className="span"></div> */}</div>
+              <div className="line ">{}</div>
             </div>
           </div>
           <div className="hero__right">

@@ -41,11 +41,9 @@ function AksiyaProducts() {
               return product.new_cost;
             })
             .map((item) => (
-              // item.filter(item =>{return item.new_cost})
               <div className="product__card flex p-8" key={item.id}>
                 <div className="card__left w-[45%]">
                   <div className="left__top flex items-center">
-                    {/* <span className="type">YANGI MAHSULOT</span> */}
                     <div>
                       {item.new_cost && <span className="aksiya ">AKSIYA</span>}
                     </div>

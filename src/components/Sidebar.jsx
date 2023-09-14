@@ -1,4 +1,3 @@
-import { Routes } from "react-router-dom";
 import uuid from "react-uuid";
 // import Zakaz from "../../public/icon/zakaz.svg";
 // import Custom from "../../public/icon/custom.svg";
@@ -32,11 +31,6 @@ export default function Sidebar() {
           );
         })}
       </ul>
-
-      <Routes>
-        {/* <Route index element={<Order />} />
-        <Route path="customers" element={<Customer />} /> */}
-      </Routes>
     </div>
   );
 }

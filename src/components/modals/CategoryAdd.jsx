@@ -6,7 +6,7 @@ import { useRef } from "react";
 
 function CategoryAdd({ setCategoryAdd, category2, setCategory2 }) {
   const categoryInput = useRef("");
-  //   const [category, setCategory] = useState();
+
   const [check, setCheck] = useState(true);
 
   const closeModal = () => {

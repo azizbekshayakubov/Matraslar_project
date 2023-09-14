@@ -62,7 +62,7 @@ function AboutUs() {
       </div>
       <div className="home-cards">
         <h1 className="home-cards-title my-16">Nega bizni tanlashadi</h1>
-        <div className="home-cardss">
+        <div className="home-cardss  ">
           <div className="home-two-card rounded">
             <img src={Card} alt="" />
             <h1>Yetkazib Berish</h1>
@@ -70,7 +70,7 @@ function AboutUs() {
               Toshkent bo'ylab bepul o'lchov <br /> va etkazib berish
             </p>
           </div>
-          <div className="home-two-card">
+          <div className="home-two-card rounded">
             <img src={Card2} alt="" />
             <h1>Qo'llab quvvatlash</h1>
             <p>
@@ -79,7 +79,7 @@ function AboutUs() {
             </p>
             <a className="input-tel">+998 97 144-24-42 </a>
           </div>
-          <div className="home-two-card">
+          <div className="home-two-card rounded">
             <img src={Card3} alt="" />
             <h1>Kafolat</h1>
             <p>

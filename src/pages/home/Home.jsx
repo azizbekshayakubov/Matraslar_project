@@ -10,8 +10,6 @@ import Zakaz from "../../components/modals/Zakaz";
 import Address from "../../components/Address";
 import Footer from "../../components/Footer";
 import { useState } from "react";
-// import ProductAdd from "../components/modals/products/ProductAdd";
-// import ProductEdite from "../components/modals/products/ProductEdite";
 
 import "../home/_Home.scss";
 
@@ -26,7 +24,7 @@ function Home() {
         <Hero />
       </section>
       <Statistics />
-      {/* <ZoomModal/> */}
+
       <div id="katalog">
         <OurProducts />
       </div>
@@ -40,7 +38,6 @@ function Home() {
       <div id="address">
         <Address />
       </div>
-      {/* <Hometwo /> */}
       <div id="aloqa">
         <Footer />
       </div>
@@ -51,8 +48,6 @@ function Home() {
         />
       )}
       {openZakazDone && <ZakazDone setOpenZakazDone={setOpenZakazDone} />}
-      {/* <ProductAdd/> */}
-      {/* <ProductEdite/> */}
     </div>
   );
 }

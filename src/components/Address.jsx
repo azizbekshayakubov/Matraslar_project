@@ -40,7 +40,6 @@ function Address() {
                   className="h-[230px] w-[420px]"
                 />
               </div>
-              {/* <img src={item.img} alt="addrss" className="w-[420px] h-[230px]" /> */}
             </div>
           ))}
       </div>

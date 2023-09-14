@@ -10,8 +10,6 @@ function DeleteCategory({ id, setDelCategory }) {
       },
     });
     setDelCategory(false);
-
-    //   console.log(id);
   };
   const handleDeleteNo = () => {
     setDelCategory(false);
