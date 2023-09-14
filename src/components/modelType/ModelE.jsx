@@ -29,7 +29,6 @@ function ModelE() {
   const url = "http://localhost:1212/api/products";
   const { data, loader, error } = useFetch(url);
   const product = data && data.products;
-  //  console.log(product);
 
   return (
     <>
@@ -43,7 +42,6 @@ function ModelE() {
               return product.category === "Model E";
             })
             .map((item) => (
-              // item.filter(item =>{return item.new_cost})
               <div className="product__card flex p-8" key={item.id}>
                 <div className="card__left w-[45%]">
                   <div className="left__top flex items-center">

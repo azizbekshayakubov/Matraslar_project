@@ -1,6 +1,4 @@
-/* eslint-disable no-unused-vars */
-import { Route, Routes, redirect } from "react-router-dom";
-import { Navigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Admin from "./pages/admin/Admin";
 import Login from "./pages/login/Login";
 import Home from "./pages/home/Home";
@@ -21,6 +19,7 @@ import NotFound from "./pages/NotFound";
 import Mahsulotlar from "./components/AdminBlok/Mahsulotlar";
 import Texnology from "./components/AdminBlok/Texnology";
 import { useState } from "react";
+
 import { useFetch } from "./hook/useFetch";
 
 // import Home from "./pages/home/Home";
@@ -40,17 +39,13 @@ function App() {
 
   const url = "http://localhost:1212/api/products";
   const { data } = useFetch(url);
+  // eslint-disable-next-line no-unused-vars
   const category = data && data.categories;
 
   return (
     <>
       <Routes>
-        <Route path="/home" element={<Home />} />
-        <Route path="/" element={<Navigate to="/home" />}>
-          <Route
-            path="login"
-            element={<Login token={token} setToken={setToken} />}
-          />
+        <Route path="/" element={<Home />}>
           <Route index element={<All />} />
           <Route path="modelA" element={<ModelA />} />
           <Route path="modelB" element={<ModelB />} />
@@ -59,7 +54,6 @@ function App() {
           <Route path="modelE" element={<ModelE />} />
           <Route path="modelF" element={<ModelF />} />
         </Route>
-        <Route index element={<Home />} />
         token ?
         <Route
           path="/admin/*"
@@ -82,6 +76,12 @@ function App() {
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
+      {/* , // return ( //{" "}
+      <div className="App">
+        // <RouterProvider router={routes} />
+        //{" "}
+      </div>
+      // ); */}
     </>
   );
 }

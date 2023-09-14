@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { Karzinka, Zoom } from "../../assets/style/imgs/icons/icons";
-// import './All.scss'
+import "./_All.scss";
 import matrasImg from "../../assets/style/imgs/matras.png";
 import ZoomModal from "../modals/ZoomModal";
 import { useFetch } from "../../hook/useFetch";
@@ -19,7 +19,6 @@ function All() {
   const url = "http://localhost:1212/api/products";
   const { data, loader, error } = useFetch(url);
   const product = data && data.products;
-  //  console.log(product);
 
   const handleZoom = (e) => {
     console.log(e);

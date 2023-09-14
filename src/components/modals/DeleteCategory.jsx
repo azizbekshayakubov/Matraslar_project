@@ -1,30 +1,30 @@
-import React from 'react'
+/* eslint-disable react/prop-types */
 
-function DeleteCategory({id, setDelCategory}) {
-    const handleDelete =()=>{
-      fetch(`http://localhost:1212/admin/categories/${id}`, {
-        method: "DELETE",
-        headers: {
-          Authorization:
-            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjkzNzQzNDU0fQ.sFu4MYKeNEy2Q7SufqeoX4yqN4G-G8GfWVEwUGwDOGo",
-        }
-      });
-      setDelCategory(false)
+function DeleteCategory({ id, setDelCategory }) {
+  const handleDelete = () => {
+    fetch(`http://localhost:1212/admin/categories/${id}`, {
+      method: "DELETE",
+      headers: {
+        Authorization:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjkzNzQzNDU0fQ.sFu4MYKeNEy2Q7SufqeoX4yqN4G-G8GfWVEwUGwDOGo",
+      },
+    });
+    setDelCategory(false);
 
     //   console.log(id);
-    }
-    const handleDeleteNo =()=>{
-        setDelCategory(false);
-    }
+  };
+  const handleDeleteNo = () => {
+    setDelCategory(false);
+  };
   return (
-    <div className="fixed left-[40%] top-[15%] w-[30%] rounded-md bg-[#f5f0e0]  p-6 text-center border-2 border-red-600">
-      <h3 className="font-medium text-xl">Haqiqatdan ham o'chirmoqchimisiz?</h3>
-      <div className="bttns mt-4 flex justify-end space-x-3 me-2">
+    <div className="fixed left-[40%] top-[15%] w-[30%] rounded-md border-2  border-red-600 bg-[#f5f0e0] p-6 text-center">
+      <h3 className="text-xl font-medium">Haqiqatdan ham ochirmoqchimisiz?</h3>
+      <div className="bttns me-2 mt-4 flex justify-end space-x-3">
         <button
           className="no rounded border bg-red-200 px-6 py-1 font-medium"
           onClick={handleDeleteNo}
         >
-          Yo'q
+          Yoq
         </button>
         <button
           className="yes rounded border bg-red-200 px-6 py-1 font-medium hover:bg-red-400 hover:text-white "
@@ -37,4 +37,4 @@ function DeleteCategory({id, setDelCategory}) {
   );
 }
 
-export default DeleteCategory
+export default DeleteCategory;

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useRef } from "react";
 
 // eslint-disable-next-line react/prop-types
 export default function Login({ data }) {

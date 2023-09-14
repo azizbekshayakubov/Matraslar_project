@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useEffect, useState } from "react";
-import Vizitka from "../components/Vizitka";
+
 import Social from "../assets/style/homeimage/social.png";
 import { Arrow } from "../assets/style/homeimage/Img";
 
@@ -68,7 +68,6 @@ const Footer = () => {
               </div>
             </div>
           )}
-          {vizitka && <Vizitka />}
         </div>
       </div>
 

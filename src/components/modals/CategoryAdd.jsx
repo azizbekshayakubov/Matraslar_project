@@ -1,12 +1,12 @@
-import React from "react";
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import { CrossBtn } from "../../assets/style/imgs/icons/icons";
 import { useState } from "react";
 import { useRef } from "react";
-import axios from "axios";
 
 function CategoryAdd({ setCategoryAdd, category2, setCategory2 }) {
   const categoryInput = useRef("");
-//   const [category, setCategory] = useState();
+  //   const [category, setCategory] = useState();
   const [check, setCheck] = useState(true);
 
   const closeModal = () => {
@@ -16,24 +16,24 @@ function CategoryAdd({ setCategoryAdd, category2, setCategory2 }) {
     setCheck(!check);
   };
   const handlePost = (e) => {
-      setCategoryAdd(false)
+    setCategoryAdd(false);
     let obj = {
       category: categoryInput.current.value,
       isActive: check,
     };
     e.preventDefault();
-    
-      fetch("http://localhost:1212/admin/categories", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization:
-            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjkzNzQzNDU0fQ.sFu4MYKeNEy2Q7SufqeoX4yqN4G-G8GfWVEwUGwDOGo",
-        },
-        body: JSON.stringify(obj)
-      })
-         .then((res) => res.json())
-         .then((data) => setCategory2(data));
+
+    fetch("http://localhost:1212/admin/categories", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjkzNzQzNDU0fQ.sFu4MYKeNEy2Q7SufqeoX4yqN4G-G8GfWVEwUGwDOGo",
+      },
+      body: JSON.stringify(obj),
+    })
+      .then((res) => res.json())
+      .then((data) => setCategory2(data));
   };
   return (
     <div className="fixed left-[40%] top-[15%] ">
@@ -41,7 +41,7 @@ function CategoryAdd({ setCategoryAdd, category2, setCategory2 }) {
         className="relative w-[270px] overflow-hidden rounded bg-slate-300 p-6"
         onSubmit={handlePost}
       >
-        <h2 className="title mb-7 text-3xl font-bold">Qo'shish</h2>
+        <h2 className="title mb-7 text-3xl font-bold">Qoshish</h2>
         <label>
           <span className=" text-xl ">Kategoriya nomi:</span>
           <input
@@ -67,7 +67,7 @@ function CategoryAdd({ setCategoryAdd, category2, setCategory2 }) {
           </div>
         </div>
         <button className="mt-10 w-full rounded bg-[#01384D] px-7 py-2 text-white">
-          Qo'shish
+          Qoshish
         </button>
         <div className="absolute right-0 top-0" onClick={closeModal}>
           <CrossBtn />

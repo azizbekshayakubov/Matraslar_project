@@ -1,11 +1,10 @@
-import React from "react";
 import { CrossBtn } from "../../assets/style/imgs/icons/icons";
 import { useState } from "react";
 import { useRef } from "react";
 
-function CategoryAdd({ setCategoryAdd, idEdite, setCategory2  }) {
+function CategoryAdd({ setCategoryAdd, idEdite, setCategory2 }) {
   const categoryInput = useRef("");
-  //   const [category, setCategory] = useState();
+
   const [check, setCheck] = useState(true);
 
   const closeModal = () => {
@@ -49,7 +48,6 @@ function CategoryAdd({ setCategoryAdd, idEdite, setCategory2  }) {
             type="text"
             placeholder="masalan: Model A"
             ref={categoryInput}
-            // value=''
           />
         </label>
         <div className="mt-6 flex w-full items-center justify-between">
@@ -68,7 +66,7 @@ function CategoryAdd({ setCategoryAdd, idEdite, setCategory2  }) {
           </div>
         </div>
         <button className="mt-10 w-full rounded bg-[#01384D] px-7 py-2 text-white">
-          Qo'shish
+          Qoshish
         </button>
         <div className="absolute right-0 top-0" onClick={closeModal}>
           <CrossBtn />
