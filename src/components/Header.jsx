@@ -33,7 +33,7 @@ function Header({ setOpenZakaz }) {
             </button>
             <div className="flex items-center justify-between gap-9">
               <div
-                className={`popover absolute right-0 top-14 z-10 bg-[#eabf9f] p-4 ${
+                className={`popover absolute right-0 top-14 z-10 bg-[rgb(238,148,80)] p-4 ${
                   popoverOpen ? "" : "hidden"
                 } md:static md:w-auto md:border-none md:bg-transparent md:p-0`}
               >
@@ -64,7 +64,7 @@ function Header({ setOpenZakaz }) {
 
                 <button
                   onClick={openOrder}
-                  className="order__btn mt-4 rounded-full bg-[#eabf9f] px-4 py-1 text-center hover:bg-[#c98f6f]"
+                  className="order__btn mt-4 rounded-full bg-[rgb(238,148,80)] px-4 py-1 text-center hover:bg-[#c98f6f]"
                 >
                   Buyurtma berish
                 </button>
@@ -98,7 +98,7 @@ function Header({ setOpenZakaz }) {
                     </div>
                     <button
                       onClick={openOrder}
-                      className="order__btn ml-4 rounded-full bg-[#eabf9f] px-4 py-1 text-black hover:bg-[#c98f6f]"
+                      className="order__btn ml-4 rounded-full  bg-[rgb(238,148,80)] px-4 py-1 text-black hover:bg-[#c98f6f]"
                     >
                       Buyurtma berish
                     </button>

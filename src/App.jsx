@@ -59,7 +59,10 @@ function App() {
         </Route>
         <Route index element={<Home />} />
         token ?
-        <Route path="admin" element={<Admin />}>
+        <Route
+          path="/admin/*"
+          element={token ? <Admin /> : <Login data={{ token, setToken }} />}
+        >
           <Route
             path="buyrtmalar"
             index
@@ -77,12 +80,6 @@ function App() {
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
-      {/* , // return ( //{" "}
-      <div className="App">
-        // <RouterProvider router={routes} />
-        //{" "}
-      </div>
-      // ); */}
     </>
   );
 }

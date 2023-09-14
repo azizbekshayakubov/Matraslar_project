@@ -31,7 +31,7 @@ function Hero() {
       <div className="flex">
         <div className="hero container flex  w-full items-center">
           <div className="hero__left">
-            <div className="hero__title md:text-5xl">
+            <div className="hero__title fs-18 md:text-5xl">
               Kechalari sokin dam oling
             </div>
             <div className="hero__right-two">

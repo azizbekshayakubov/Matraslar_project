@@ -52,7 +52,7 @@ const Footer = () => {
                     <span className="tel__code pl-3">+998</span>
                     <div className=" h-[12px] w-[1px] bg-slate-600"></div>
                     <input
-                      className="rounded-md p-3  outline-none"
+                      className="rounded p-3  outline-none"
                       onChange={(e) => setTelNumber(e.target.value)}
                       type="tel"
                       name="tel"
