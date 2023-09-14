@@ -4,7 +4,6 @@
 import React, { useEffect, useState } from "react";
 import { IconDelete, IconMell } from "../../assets/style/adminimage/IconAdmin";
 import { NavLink } from "react-router-dom";
-// import AddModal from '../../components/modals/AddModal';
 import DeleteCategory from "../modals/category/DeleteCategory";
 import CategoryAdd from "../modals/category/CategoryAdd";
 import CategoryEdite from "../modals/category/CategoryEdite";
@@ -29,8 +28,6 @@ function Toifalar() {
       .then((res) => res.json())
       .then((data) => setCategory(data));
   }, [delCategory, category2]);
-
-  // console.log(category);
 
   const handleDelete = (id) => {
     setId(id);
@@ -88,7 +85,6 @@ function Toifalar() {
           >
             Qo'shish
           </button>
-          {/* {complate && <AddModal />} */}
         </div>
       </NavLink>
       {delCategory && (

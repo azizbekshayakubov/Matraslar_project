@@ -16,7 +16,6 @@ function AddressDelete({ setOpenAddressDel, idDel }) {
   };
   const handleDeleteNo = () => {
     setOpenAddressDel(false);
-    console.log(id);
   };
   return (
     <div className="fixed left-[40%] top-[15%] w-[30%] rounded-md border-2  border-red-600 bg-[#f5f0e0] p-6 text-center shadow-2xl shadow-black">

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Vizitka from "../components/Vizitka";
 import Social from "../assets/style/homeimage/social.png";
 import { Arrow } from "../assets/style/homeimage/Img";
-import vizitkaImg from "../assets/style/homeimage/vizitka.png";
+
 import "../index.css";
 
 const Footer = () => {
@@ -106,9 +106,7 @@ const Footer = () => {
               <Arrow />
             </button>
           </div>
-          <div className="foter-vizitka">
-            <img src={vizitkaImg} alt="" />
-          </div>
+          <div className="foter-vizitka"></div>
         </div>
       </div>
     </>

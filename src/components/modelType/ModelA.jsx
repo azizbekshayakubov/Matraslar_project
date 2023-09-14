@@ -1,25 +1,19 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
-import { useState } from 'react';
-import { Karzinka, Zoom } from '../../assets/style/imgs/icons/icons';
+import { useState } from "react";
+import { Karzinka, Zoom } from "../../assets/style/imgs/icons/icons";
 import matrasImg from "../../assets/style/imgs/matras.png";
-import { useFetch } from '../../hook/useFetch';
-import Zakaz from '../modals/Zakaz';
-import ZakazDone from '../modals/ZakazDone';
-import ZoomModal from '../modals/ZoomModal';
-import Loader1 from '../loader/Loader1';
+import { useFetch } from "../../hook/useFetch";
+import Zakaz from "../modals/Zakaz";
+import ZakazDone from "../modals/ZakazDone";
+import ZoomModal from "../modals/ZoomModal";
+import Loader1 from "../loader/Loader1";
 
 function ModelA() {
-
   const [zoom, setZoom] = useState(false);
   const [id, setId] = useState(null);
   const [openZakaz, setOpenZakaz] = useState(false);
   const [openZakazDone, setOpenZakazDone] = useState(false);
-
-   const handleZoom = (e) => {
-     console.log(e);
-     setZoom(true);
-   };
 
   const handleOrder = (id) => {
     console.log(id);
@@ -27,10 +21,10 @@ function ModelA() {
     setId(id);
   };
 
-     const url = "http://localhost:1212/api/products";
-     const { data, loader, error } = useFetch(url);
-     const product = data && data.products;
-    //  console.log(product);
+  const url = "http://localhost:1212/api/products";
+  const { data, loader, error } = useFetch(url);
+  const product = data && data.products;
+  //  console.log(product);
 
   return (
     <>
@@ -49,15 +43,12 @@ function ModelA() {
                 <div className="card__left w-[45%]">
                   <div className="left__top flex items-center">
                     {item.status !== "0" && (
-                      <span className="type">YANGI MAHSULOT</span>
+                      <span className="type ">YANGI MAHSULOT</span>
                     )}
                     <div>
                       {item.new_cost && <span className="aksiya">AKSIYA</span>}
                     </div>
-                    <div
-                      className="zoom mt-10 rounded-full  bg-[#D9E1E7] p-3 "
-                      onClick={() => handleZoom()}
-                    >
+                    <div className="zoom mt-10 rounded-full  bg-[#D9E1E7] p-3 ">
                       <Zoom />
                     </div>
                   </div>
@@ -138,4 +129,4 @@ function ModelA() {
   );
 }
 
-export default ModelA
+export default ModelA;

@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import { useRef, useState } from "react";
-
 
 import "./_Modal.scss";
 import { CrossBtn } from "../../assets/style/imgs/icons/icons";
@@ -8,7 +9,7 @@ import { useFetch } from "../../hook/useFetch";
 // import { options } from "prettier-plugin-tailwindcss";
 
 const Zakaz = ({ setOpenZakaz, setOpenZakazDone, id }) => {
-  const [count, setCount] = useState(1); // count o'zgaruvchini va uning setCount funktsiyasini yaratamiz
+  const [count, setCount] = useState(1);
 
   const handleIncrement = () => {
     setCount(count + 1);
@@ -23,18 +24,17 @@ const Zakaz = ({ setOpenZakaz, setOpenZakazDone, id }) => {
   const url = "http://localhost:1212/api/products";
   const { data, loader, error } = useFetch(url);
   const category = data && data.products;
-  // 
+  //
 
-  const userName = useRef()
-  const userTel = useRef()
-  const productNamee = useRef()
-
+  const userName = useRef();
+  const userTel = useRef();
+  const productNamee = useRef();
 
   //POST request
   const handlePostOrder = (e) => {
     e.preventDefault();
-    setOpenZakaz(false)
-    setOpenZakazDone(true)
+    setOpenZakaz(false);
+    setOpenZakazDone(true);
     let obj = {
       name: userName.current.value,
       number: userTel.current.value,
@@ -48,14 +48,14 @@ const Zakaz = ({ setOpenZakaz, setOpenZakazDone, id }) => {
       body: JSON.stringify(obj),
       headers: {
         "Content-Type": "application/json",
-        Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjkzNzQzNDU0fQ.sFu4MYKeNEy2Q7SufqeoX4yqN4G-G8GfWVEwUGwDOGo",
+        Authorization:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjkzNzQzNDU0fQ.sFu4MYKeNEy2Q7SufqeoX4yqN4G-G8GfWVEwUGwDOGo",
         // "Authorization":
         //   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjkzOTExMzExfQ.EKV2yelCebB4nkGIT0t4-gBVUMEUPdQKUEgj5Hh2Cgo",
       },
     })
       .then((res) => res.json())
       .then((data) => console.log(data));
-
   };
 
   return (
@@ -71,7 +71,7 @@ const Zakaz = ({ setOpenZakaz, setOpenZakazDone, id }) => {
           <h1>Buyurtma Qilish</h1>
         </div>
 
-        <form onSubmit={ handlePostOrder}>
+        <form onSubmit={handlePostOrder}>
           <div className="my-3 flex justify-center">
             <input
               ref={userName}
@@ -82,7 +82,7 @@ const Zakaz = ({ setOpenZakaz, setOpenZakazDone, id }) => {
             />
           </div>
           <div className=" w-full">
-            <div className="zakaz-input-tel flex justify-left">
+            <div className="zakaz-input-tel justify-left flex">
               <span className="p-4">+998</span>
               <input
                 ref={userTel}
@@ -104,7 +104,12 @@ const Zakaz = ({ setOpenZakaz, setOpenZakazDone, id }) => {
               ref={productNamee}
             >
               <option>
-                {id ? category && category.filter((item)=>{return item.id == id })[0].name:''}
+                {id
+                  ? category &&
+                    category.filter((item) => {
+                      return item.id == id;
+                    })[0].name
+                  : ""}
               </option>
               {loader && <option>Loading...</option>}
               {category &&

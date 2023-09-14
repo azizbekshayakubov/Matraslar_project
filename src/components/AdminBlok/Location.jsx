@@ -35,9 +35,6 @@ function LOcation() {
       .then((data) => setLocation(data));
   }, [addressAdd, openAddressDel, openAddressEdite]);
 
-  //  console.log(location);
-  //  console.log(addressAdd);
-
   const handleDelete = (id) => {
     setIdDel(id);
     setOpenAddressDel(true);

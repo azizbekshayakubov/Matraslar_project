@@ -9,7 +9,6 @@ function ProductAdd({ setOpenProductAdd }) {
   const name = useRef();
   const category = useRef();
   const weight = useRef();
-  // const images = useRef();
   const warranty = useRef();
   const size = useRef();
   const capacity = useRef();
@@ -81,7 +80,7 @@ function ProductAdd({ setOpenProductAdd }) {
     >
       <form className="flex gap-8" onSubmit={handlePost}>
         <div>
-          <h3 className="mb-2 text-[18px] font-semibold">O'zgartirish</h3>
+          <h3 className="mb-2 text-[18px] font-semibold">Ozgartirish</h3>
           <input
             type="file"
             className="flex  h-[230px] w-[230px] items-center justify-center  rounded bg-[#013d4d2c]"
@@ -176,16 +175,16 @@ function ProductAdd({ setOpenProductAdd }) {
             <label
               className="mt-4
             block"
-              htmlFor="Sig’m"
+              htmlFor="Sigm"
             >
-              Sig’m
+              Sigm
             </label>
             <input
               className="mt-2 h-[40px] w-[220px] rounded border pl-3"
               ref={capacity}
               required
               type="text"
-              id="Sig’m"
+              id="Sigm"
               placeholder="masalan:2"
             />
             <label className="mt-4 block" htmlFor="Aksiya Narxi">
@@ -201,7 +200,7 @@ function ProductAdd({ setOpenProductAdd }) {
           </div>
           <div>
             <label className="mt-8 block" htmlFor="Ma'lumot">
-              Ma'lumot
+              Malumot
             </label>
             <textarea
               className="mt-2 h-[127px] w-[220px] rounded border p-3"
@@ -241,7 +240,7 @@ function ProductAdd({ setOpenProductAdd }) {
               </div>
             </div>
             <button className="mt-[45px] h-[45px] w-[220px] rounded bg-[#01384D] text-white">
-              Qo'shish
+              Qoshish
             </button>
           </div>
         </div>

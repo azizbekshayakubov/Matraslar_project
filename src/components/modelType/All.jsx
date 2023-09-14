@@ -1,50 +1,50 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react'
-import { Karzinka, Zoom } from '../../assets/style/imgs/icons/icons';
+import React, { useState } from "react";
+import { Karzinka, Zoom } from "../../assets/style/imgs/icons/icons";
 // import './All.scss'
-import matrasImg from '../../assets/style/imgs/matras.png'
-import ZoomModal from '../modals/ZoomModal';
-import { useFetch } from '../../hook/useFetch';
-import Zakaz from '../modals/Zakaz';
-import ZakazDone from '../modals/ZakazDone';
-import Loader1 from '../loader/Loader1';
+import matrasImg from "../../assets/style/imgs/matras.png";
+import ZoomModal from "../modals/ZoomModal";
+import { useFetch } from "../../hook/useFetch";
+import Zakaz from "../modals/Zakaz";
+import ZakazDone from "../modals/ZakazDone";
+import Loader1 from "../loader/Loader1";
 
 function All() {
-    
-  const [zoom, setZoom] = useState(false)
-  const [id, setId] = useState(null)
-  const [openZakaz, setOpenZakaz] = useState(false)
-  const [openZakazDone, setOpenZakazDone] = useState(false)
+  const [zoom, setZoom] = useState(false);
+  const [id, setId] = useState(null);
+  const [openZakaz, setOpenZakaz] = useState(false);
+  const [openZakazDone, setOpenZakazDone] = useState(false);
 
-
-   const url = "http://localhost:1212/api/products";
-   const { data, loader, error } = useFetch(url);
-   const product = data && data.products;
+  const url = "http://localhost:1212/api/products";
+  const { data, loader, error } = useFetch(url);
+  const product = data && data.products;
   //  console.log(product);
 
-   const handleZoom = (e) => {
+  const handleZoom = (e) => {
     console.log(e);
-    setZoom(true)
-   }
-   const handleOrder = (id) => {
+    setZoom(true);
+  };
+  const handleOrder = (id) => {
     console.log(id);
-    setOpenZakaz(true)
-    setId(id)
-   }
+    setOpenZakaz(true);
+    setId(id);
+  };
   return (
     <>
-      {loader && <Loader1/>}
+      {loader && <Loader1 />}
       {error && <h2>{error}</h2>}
       {product &&
         product.map((item) => (
           <div className="product__card flex p-8" key={item.id}>
             <div className="card__left w-[45%]">
               <div className="left__top flex items-center">
-                {item.status !== "0" && <span className="type">YANGI MAHSULOT</span>}
+                {item.status !== "0" && (
+                  <span className="type">YANGI MAHSULOT</span>
+                )}
                 {item.new_cost && <span className="aksiya">AKSIYA</span>}
                 <div
-                  className="zoom rounded-full bg-[#D9E1E7]  p-3 mt-10"
+                  className="zoom mt-10 rounded-full  bg-[#D9E1E7] p-3"
                   onClick={() => handleZoom()}
                 >
                   <Zoom />
@@ -122,4 +122,4 @@ function All() {
   );
 }
 
-export default All
+export default All;

@@ -20,7 +20,7 @@ function OurProducts() {
           {category &&
             category.map((item) => (
               <NavLink to={item.category.split(" ").join("")} key={item.id}>
-                <li className="model__type">{item.category}</li>
+                <li className="model__type fs-6">{item.category}</li>
               </NavLink>
             ))}
         </ul>

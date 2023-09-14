@@ -1,5 +1,7 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import React, { useRef, useState } from "react";
-// import { ImageICons } from "../../../assets/style/adminimage/IconAdmin";
+
 import { CrossBtn } from "../../../assets/style/imgs/icons/icons";
 import { useFetch } from "../../../hook/useFetch";
 
@@ -7,7 +9,6 @@ function ProductEdite({ setOpenProductEdite, idEdite }) {
   const name = useRef();
   const category = useRef();
   const weight = useRef();
-  // const images = useRef();
   const warranty = useRef();
   const size = useRef();
   const capacity = useRef();
@@ -79,7 +80,7 @@ function ProductEdite({ setOpenProductEdite, idEdite }) {
     >
       <form className="flex gap-8" onSubmit={handlePost}>
         <div>
-          <h3 className="mb-2 text-[18px] font-semibold">O'zgartirish</h3>
+          <h3 className="mb-2 text-[18px] font-semibold">Ozgartirish</h3>
           <input
             type="file"
             className="flex  h-[230px] w-[230px] items-center justify-center  rounded bg-[#013d4d2c]"
@@ -174,9 +175,9 @@ function ProductEdite({ setOpenProductEdite, idEdite }) {
             <label
               className="mt-4
             block"
-              htmlFor="Sig’m"
+              htmlFor="Sigm"
             >
-              Sig’m
+              Sigm
             </label>
             <input
               className="mt-2 h-[40px] w-[220px] rounded border pl-3"
@@ -239,7 +240,7 @@ function ProductEdite({ setOpenProductEdite, idEdite }) {
               </div>
             </div>
             <button className="mt-[45px] h-[45px] w-[220px] rounded bg-[#01384D] text-white">
-              Qo'shish
+              Qoshish
             </button>
           </div>
         </div>

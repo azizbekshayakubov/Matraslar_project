@@ -1,4 +1,6 @@
-import { Route, Routes } from "react-router-dom";
+/* eslint-disable no-unused-vars */
+import { Route, Routes, redirect } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import Admin from "./pages/admin/Admin";
 import Login from "./pages/login/Login";
 import Home from "./pages/home/Home";
@@ -19,7 +21,6 @@ import NotFound from "./pages/NotFound";
 import Mahsulotlar from "./components/AdminBlok/Mahsulotlar";
 import Texnology from "./components/AdminBlok/Texnology";
 import { useState } from "react";
-
 import { useFetch } from "./hook/useFetch";
 
 // import Home from "./pages/home/Home";
@@ -44,7 +45,8 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home />}>
+        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Navigate to="/home" />}>
           <Route
             path="login"
             element={<Login token={token} setToken={setToken} />}

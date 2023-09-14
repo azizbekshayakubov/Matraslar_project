@@ -5,23 +5,24 @@ import OurProducts from "../../components/OurProducts";
 import AksiyaProducts from "../../components/AksiyaProducts";
 import Technologies from "../../components/Technologies";
 import AboutUs from "../../components/AboutUs";
+import ZakazDone from "../../components/modals/ZakazDone";
+import Zakaz from "../../components/modals/Zakaz";
 import Address from "../../components/Address";
 import Footer from "../../components/Footer";
-
-// import { useState } from "react";
+import { useState } from "react";
 // import ProductAdd from "../components/modals/products/ProductAdd";
 // import ProductEdite from "../components/modals/products/ProductEdite";
 
 import "../home/_Home.scss";
 
 function Home() {
-  // const [openZakaz, setOpenZakaz] = useState(false);
-  // const [openZakazDone, setOpenZakazDone] = useState(false);
+  const [openZakaz, setOpenZakaz] = useState(false);
+  const [openZakazDone, setOpenZakazDone] = useState(false);
   return (
     <div>
       <section className="hero__full">
-        <Header />
-        {/* setOpenZakaz={setOpenZakaz} */}
+        <Header setOpenZakaz={setOpenZakaz} />
+
         <Hero />
       </section>
       <Statistics />
@@ -43,7 +44,13 @@ function Home() {
       <div id="aloqa">
         <Footer />
       </div>
-
+      {openZakaz && (
+        <Zakaz
+          setOpenZakaz={setOpenZakaz}
+          setOpenZakazDone={setOpenZakazDone}
+        />
+      )}
+      {openZakazDone && <ZakazDone setOpenZakazDone={setOpenZakazDone} />}
       {/* <ProductAdd/> */}
       {/* <ProductEdite/> */}
     </div>

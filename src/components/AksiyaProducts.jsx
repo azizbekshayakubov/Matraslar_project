@@ -47,7 +47,7 @@ function AksiyaProducts() {
                   <div className="left__top flex items-center">
                     {/* <span className="type">YANGI MAHSULOT</span> */}
                     <div>
-                      {item.new_cost && <span className="aksiya">AKSIYA</span>}
+                      {item.new_cost && <span className="aksiya ">AKSIYA</span>}
                     </div>
                     <div
                       className="zoom rounded-full bg-[#D9E1E7]  p-3 "

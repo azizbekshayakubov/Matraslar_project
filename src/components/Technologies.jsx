@@ -8,7 +8,7 @@ function Technologies() {
   // console.log(tech);
   return (
     <div className="container">
-      <div className="home-card rounded">
+      <div className="home-card rounded   ">
         <h1 className="home-card-title">Ishlab chiqarish texnologiyalari</h1>
         <div className="home-boxs fs-16">
           {tech &&
