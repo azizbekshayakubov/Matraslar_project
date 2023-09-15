@@ -24,10 +24,14 @@ function AksiyaProducts() {
     setId(id);
   };
 
-  const url = "http://localhost:1212/api/products";
-  const { data, loader, error } = useFetch(url);
-  const product = data && data.products;
+  // const url = "http://localhost:1212/api/products";
+  // const { data, loader, error } = useFetch(url);
+  // const product = data && data.products;
   //  console.log(product);
+  const { data, loader, error } = useFetch(
+    "http://localhost:1212/api/products",
+  );
+  const product = data && data.products;
 
   return (
     <>

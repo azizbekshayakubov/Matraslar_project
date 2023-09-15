@@ -4,8 +4,11 @@ import { NavLink, Outlet } from "react-router-dom";
 import { useFetch } from "../hook/useFetch";
 
 function OurProducts() {
-  const url = "http://localhost:1212/api/products";
-  const { data, loader, error } = useFetch(url);
+  // const url = "http://localhost:1212/api/products";
+  // const { data, loader, error } = useFetch(url);
+  const { data, loader, error } = useFetch(
+    "http://localhost:1212/api/products",
+  );
   const category = data && data.categories;
   console.log(data);
 

@@ -4,8 +4,12 @@ import Homeabout from "../assets/style/homeimage/home-about.png";
 import { Link } from "react-router-dom";
 
 function Address() {
-  const urlAddress = "http://localhost:1212/api/address";
-  const { data: address, loader: loaderr } = useFetch(urlAddress);
+  // const urlAddress = "http://localhost:1212/api/address";
+  // const { data: address, loader: loaderr } = useFetch(urlAddress);
+  const { data: address, loader: loaderr } = useFetch(
+    "http://localhost:1212/api/address",
+  );
+
   console.log(address);
   return (
     <div className="container">
@@ -26,7 +30,7 @@ function Address() {
                   className="adres-location mt-4 flex items-center justify-center gap-2 rounded border border-slate-700 px-[50px] py-[10px]"
                 >
                   <div className="adres-location">
-                    <div className="flex justify-center">
+                    <div className="flex justify-center rounded">
                       <Img /> <span>Geolokatsiya</span>
                     </div>
                   </div>
